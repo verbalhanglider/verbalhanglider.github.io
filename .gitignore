@@ -1,0 +1,6 @@
+# don't index cache files
+.sass-cache*
+*cache*
+
+# don't index vim swp files
+*swp
