@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 Docker is a powerful tool for efficiently sharing environments for complicated applications -- namely web sites or applications -- that in the past has required lots of tedious setup
 
