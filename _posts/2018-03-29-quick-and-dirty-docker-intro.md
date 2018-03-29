@@ -23,7 +23,7 @@ In this documentation, I will introduce the quick and dirty commands that you wi
 
 # Starting work with a Docker Container
 
-You can do a lot with Docker, and it is an incredible tool to allow developers to collaborate on complicated projects, but most of the time you just need to get up and running ASAP so you can get some work done. So, here is the sequence of commands that you will most often use for dockerized projects at the UChicago Library
+You can do a lot with Docker, and it is an incredible tool to allow developers to collaborate on complicated projects, but most of the time you just need to get up and running ASAP so you can get some work done. So, here is the sequence of commands that you will most often use for dockerized projects that you come across.
 
 - ```git clone git@github.com:uchicago-library/[repo name]``` or git clone https://github.com/uchicago-library/[repo name]``` to clone the project to your machine
 - ```cd [repo name]``` to move into the newly created repo directory on your machine
