@@ -1,6 +1,6 @@
 # Introduction
 
-Docker is a powerful tool for efficiently sharing environments for complicated applications -- namely web sites or applications -- that in the past has required lots of tedious setup
+[Docker](https://www.docker.com/community-edition) is a powerful tool for efficiently sharing environments for complicated applications -- namely web sites or applications -- that in the past has required lots of tedious setup
 
 1. Find out all the required software to run the web site on your development machine
 1. Search out the different software and make sure they have binaries to run on your machine
