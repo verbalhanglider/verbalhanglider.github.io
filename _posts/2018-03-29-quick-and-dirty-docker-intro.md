@@ -25,7 +25,7 @@ In this documentation, I will introduce the quick and dirty commands that you wi
 
 You can do a lot with Docker, and it is an incredible tool to allow developers to collaborate on complicated projects, but most of the time you just need to get up and running ASAP so you can get some work done. So, here is the sequence of commands that you will most often use for dockerized projects that you come across.
 
-- ```git clone git@github.com:uchicago-library/[repo name]``` or git clone https://github.com/uchicago-library/[repo name]``` to clone the project to your machine
+- ```git clone git@github.com:[creator]/[repo name]``` or git clone https://github.com/[creator]/[repo name]``` to clone the project to your machine
 - ```cd [repo name]``` to move into the newly created repo directory on your machine
 - ```docker build . -t [a name that you will recognize two days later when you next look at the list of images]``` to build the container using the project's Dockerfile
 - ```docker run [that name you just filled out after the -t option in in the docker build command]``` to run the container. 
@@ -49,7 +49,7 @@ Opptionally, if you think the docker image you built is hopelessly broken and yo
 
 - ```docker rmi [image identifier]``` where [image identifier] is the IMAGE_ID of the image that you want to remove
 
-## Handy commmands to keep at the ready
+# Handy commmands to keep at the ready
 
 - ```docker ps -aq``` will list all the containers on your machine
 - ```docker images -q``` will list all the images on your machine
