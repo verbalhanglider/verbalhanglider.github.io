@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Quick and Dirty Docker Intro"
+date:   2018-03-29 11:30:44 -0500
+categories: docker 
+---
 # Introduction
 
 [Docker](https://www.docker.com/community-edition) is a powerful tool for efficiently sharing environments for complicated applications -- namely web sites or applications -- that in the past has required lots of tedious setup
