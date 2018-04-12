@@ -1,34 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lambda x: blog x</title>
+    <title>lambda x: blog(x)</title>
     <description></description>
-    <link>http://verbalhanglider.github.io/</link>
-    <atom:link href="http://verbalhanglider.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Mar 2018 08:11:03 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Mar 2018 08:11:03 -0500</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 12 Apr 2018 10:19:38 -0500</pubDate>
+    <lastBuildDate>Thu, 12 Apr 2018 10:19:38 -0500</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Python Scandir Generator Example</title>
+        <description>&lt;h1 id=&quot;basic-example-of-recursive-file-walking-using-scandir&quot;&gt;Basic Example of Recursive File Walking Using Scandir&lt;/h1&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/verbalhanglider/1daae71286d68be432063b808dc099f1.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Apr 2018 10:00:44 -0500</pubDate>
+        <link>http://localhost:4000/python/generator/scandir/example/tutorial/2018/04/12/python-scandir-generator-example.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/generator/scandir/example/tutorial/2018/04/12/python-scandir-generator-example.html</guid>
+        
+        
+        <category>python</category>
+        
+        <category>generator</category>
+        
+        <category>scandir</category>
+        
+        <category>example</category>
+        
+        <category>tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>Containers vs Culture</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;I’m willing to bet that all the janky bash ever written was meant to solve a real problem. When we start getting fancier, there are often motivations less pure than “Let’s do this well,” and even if there are not, intention alone does not create maintainable software.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;– Bridget Krumhout,  &lt;em&gt;Containers Will Not Fix Your Broken Culture (and Other Hard Truths)&lt;/em&gt; April 2018.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This month’s &lt;a href=&quot;https://www.cacm.acm.org&quot;&gt;CACM&lt;/a&gt; has devoted the Practice section to discussing DevOps, and in there is a really good article called &lt;a href=&quot;https://cacm.acm.org/magazines/2018/4/226368-containers-will-not-fix-your-broken-culture-and-other-hard-truths/fulltext&quot;&gt;&lt;em&gt;Containers Will Not Fix Your Broken Culture (and Other Hard Truths)&lt;/em&gt;&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/bridgetkromhoutref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor&quot;&gt;Bridget Kromhout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s full of lots of great metaphors tips like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Creative problem solvers have a way of routing around process that we find inconvenient. If your heavyweight change control process applies except in case of emergencies, then (spoiler alert) you are going to see a surprisingly high rate of sorry-not-sorry “emergencies.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Empowering developer choice is facilitated by containers; there is always a tension between what someone else dictates and what you are convinced you need. Making thoughtful decisions about tools and architecture can help; well-considered constraints can free us from the decisions that are not bringing us distinguishable benefit. Containers can help define scope and reach of a given tool or project, and deconstructing systems to human scale allows us to comprehend their complexity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And, finally, she gets to the heart of the matter&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;…it’s worth considering the why and how of our behaviors, not just the what. If legacy were not important, you could just turn it off. But this is where your customers and money live. Glorifying exciting greenfield projects is all well and good, but the reality is that bimodal IT is a lie. It’s ludicrous to tell people that some of them have to stay in “sad mode” indefinitely, while others catapult ahead in “awesome mode.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It all comes down to the old adage: there is no free lunch. Technical solutions are no good at all without very careful planning and lots and lots and lots of talking back and forth between all the parties involved in an organization (all the different kinds of business people in all the different divisions and departments as well as the IT workers and developers). You have to get people talking and talking honestly otherwise whatever technical solution you come up with is going to fail and fail in the worst way not with a boom but with a fizzle.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Mar 2018 10:30:44 -0500</pubDate>
+        <link>http://localhost:4000/containers/organization-culture/2018/03/30/containers-vs-culture.html</link>
+        <guid isPermaLink="true">http://localhost:4000/containers/organization-culture/2018/03/30/containers-vs-culture.html</guid>
+        
+        
+        <category>containers</category>
+        
+        <category>organization-culture</category>
+        
+      </item>
+    
+      <item>
+        <title>Quick and Dirty Docker Intro</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.docker.com/community-edition&quot;&gt;Docker&lt;/a&gt; is a powerful tool for efficiently sharing environments for complicated applications – namely web sites or applications – that in the past has required lots of tedious setup&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find out all the required software to run the web site on your development machine&lt;/li&gt;
+  &lt;li&gt;Search out the different software and make sure they have binaries to run on your machine&lt;/li&gt;
+  &lt;li&gt;Install all the different software (if they even exist for the OS you are running) to your machine&lt;/li&gt;
+  &lt;li&gt;Make sure it all runs correctly on your machine&lt;/li&gt;
+  &lt;li&gt;Clone the repo to your machine&lt;/li&gt;
+  &lt;li&gt;Install the code to your machine&lt;/li&gt;
+  &lt;li&gt;Make sure that the code runs the way it is supposed to on your machine with all the new software you just installed&lt;/li&gt;
+  &lt;li&gt;Get to work writing the new code that you were tasked to write by your manager&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is a tedious process taking upwards of a week to do that you could have been spending on more useful work that actually provided value for the organization. It’s also a security problem because now (on top of all your other work) you are a system administrator in charge of keeping all that new software patched on your machine.&lt;/p&gt;
+
+&lt;p&gt;You do keep constant vigilance about latest versions for all the software on your own workstation, right?&lt;/p&gt;
+
+&lt;p&gt;Well, Docker is here to save you from all of that. Now, the developer who starts the project just has to write one Dockerfile defining all the different software required to deploy the code – defining a web server, any third-party libraries necessary, et cetera – and then you (that developer’s coworker) can deploy what she made and know that you are running what she intended you to run.&lt;/p&gt;
+
+&lt;p&gt;Not to mention: when you’re done with the docker container you just stop it and you no longer have a system administrator’s headache of maintaining all the related software you had to install on your system doing things the old way. Once the container is down, it’s as if all of that never existed on your machine&lt;/p&gt;
+
+&lt;p&gt;In this documentation, I will introduce the quick and dirty commands that you will need to get started with a dockerized project.&lt;/p&gt;
+
+&lt;h1 id=&quot;starting-work-with-a-docker-container&quot;&gt;Starting work with a Docker Container&lt;/h1&gt;
+
+&lt;p&gt;You can do a lot with Docker, and it is an incredible tool to allow developers to collaborate on complicated projects, but most of the time you just need to get up and running ASAP so you can get some work done. So, here is the sequence of commands that you will most often use for dockerized projects that you come across.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone git@github.com:[creator]/[repo name]&lt;/code&gt; or git clone https://github.com/[creator]/[repo name]``` to clone the project to your machine&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd [repo name]&lt;/code&gt; to move into the newly created repo directory on your machine&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker build . -t [a name that you will recognize two days later when you next look at the list of images]&lt;/code&gt; to build the container using the project’s Dockerfile&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run [that name you just filled out after the -t option in in the docker build command]&lt;/code&gt; to run the container.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For web sites or applications the variation of the command that you should use is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run -p 8000:80 -v $(pwd):/code [name of container]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This will run the project in its docker container on port 80 but make it available to you on your machine on port 8000&lt;/p&gt;
+
+&lt;p&gt;It will also map the directory /code in the Docker container to your current working directory defined in &lt;code class=&quot;highlighter-rouge&quot;&gt;$(pwd)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;ending-work-with-a-docker-container&quot;&gt;Ending work with a Docker container&lt;/h1&gt;
+
+&lt;p&gt;Once you’re done testing your docker container, you need to stop the container so that it frees up all resources being used – like port numbers&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker container ls&lt;/code&gt; will show the list of containers that you are running on your machine right now. You should look for the one that you started in order to test the project you’re working on right now.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker container stop [identifier]&lt;/code&gt; will stop the container named [identifier]. The [identifier] is the value for the specific container found in the CONTAINER_ID column&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Opptionally, if you think the docker image you built is hopelessly broken and you can’t possibly debug so it’s better just to nuke and start over you can&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker rmi [image identifier]&lt;/code&gt; where [image identifier] is the IMAGE_ID of the image that you want to remove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;handy-commmands-to-keep-at-the-ready&quot;&gt;Handy commmands to keep at the ready&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps -aq&lt;/code&gt; will list all the containers on your machine&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker images -q&lt;/code&gt; will list all the images on your machine&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker stop $(docker ps -aq)&lt;/code&gt; will stop all containers on your system&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker rm $(docker ps -aq)&lt;/code&gt; will remove all containers from your system
+` &lt;code class=&quot;highlighter-rouge&quot;&gt;docker rmi $(docker images -q)&lt;/code&gt; will remove all images from your system&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 29 Mar 2018 11:30:44 -0500</pubDate>
+        <link>http://localhost:4000/docker/2018/03/29/quick-and-dirty-docker-intro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/docker/2018/03/29/quick-and-dirty-docker-intro.html</guid>
+        
+        
+        <category>docker</category>
+        
+      </item>
+    
+      <item>
+        <title>First post</title>
+        <description>&lt;p&gt;This is my first post to one of countless blogs I’ve tried to start in the past. But, hopefully I can keep this one up.&lt;/p&gt;
+
+&lt;p&gt;For the time being, check out a couple of repos I am working on these days&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/uchicago-library/pyiiif&quot;&gt;pyiiif&lt;/a&gt; where I am developing a Pythonic library for creating &lt;a href=&quot;https://iiif.io/presentation/2/1&quot;&gt;IIIF Presentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/uchicago-library/iiifcollectionbrowse&quot;&gt;iiifcollectionbrowse&lt;/a&gt; where I am working on running selenium tests automatically via TravisCI for every commit to Github&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Wed, 28 Mar 2018 08:01:44 -0500</pubDate>
-        <link>http://verbalhanglider.github.io/jekyll/update/2018/03/28/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://verbalhanglider.github.io/jekyll/update/2018/03/28/welcome-to-jekyll.html</guid>
+        <link>http://localhost:4000/jekyll/update/2018/03/28/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2018/03/28/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

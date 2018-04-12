@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quick and Dirty Docker Intro</title>
+  <meta name="description" content="IntroductionDocker is a powerful tool for efficiently sharing environments for complicated applications – namely web sites or applications – that in the past...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/docker/2018/03/29/quick-and-dirty-docker-intro.html">
+  <link rel="alternate" type="application/rss+xml" title="lambda x: blog(x)" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">lambda x: blog(x)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Quick and Dirty Docker Intro</h1>
+    <p class="post-meta"><time datetime="2018-03-29T11:30:44-05:00" itemprop="datePublished">Mar 29, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="introduction">Introduction</h1>
+
+<p><a href="https://www.docker.com/community-edition">Docker</a> is a powerful tool for efficiently sharing environments for complicated applications – namely web sites or applications – that in the past has required lots of tedious setup</p>
+
+<ol>
+  <li>Find out all the required software to run the web site on your development machine</li>
+  <li>Search out the different software and make sure they have binaries to run on your machine</li>
+  <li>Install all the different software (if they even exist for the OS you are running) to your machine</li>
+  <li>Make sure it all runs correctly on your machine</li>
+  <li>Clone the repo to your machine</li>
+  <li>Install the code to your machine</li>
+  <li>Make sure that the code runs the way it is supposed to on your machine with all the new software you just installed</li>
+  <li>Get to work writing the new code that you were tasked to write by your manager</li>
+</ol>
+
+<p>This is a tedious process taking upwards of a week to do that you could have been spending on more useful work that actually provided value for the organization. It’s also a security problem because now (on top of all your other work) you are a system administrator in charge of keeping all that new software patched on your machine.</p>
+
+<p>You do keep constant vigilance about latest versions for all the software on your own workstation, right?</p>
+
+<p>Well, Docker is here to save you from all of that. Now, the developer who starts the project just has to write one Dockerfile defining all the different software required to deploy the code – defining a web server, any third-party libraries necessary, et cetera – and then you (that developer’s coworker) can deploy what she made and know that you are running what she intended you to run.</p>
+
+<p>Not to mention: when you’re done with the docker container you just stop it and you no longer have a system administrator’s headache of maintaining all the related software you had to install on your system doing things the old way. Once the container is down, it’s as if all of that never existed on your machine</p>
+
+<p>In this documentation, I will introduce the quick and dirty commands that you will need to get started with a dockerized project.</p>
+
+<h1 id="starting-work-with-a-docker-container">Starting work with a Docker Container</h1>
+
+<p>You can do a lot with Docker, and it is an incredible tool to allow developers to collaborate on complicated projects, but most of the time you just need to get up and running ASAP so you can get some work done. So, here is the sequence of commands that you will most often use for dockerized projects that you come across.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">git clone git@github.com:[creator]/[repo name]</code> or git clone https://github.com/[creator]/[repo name]``` to clone the project to your machine</li>
+  <li><code class="highlighter-rouge">cd [repo name]</code> to move into the newly created repo directory on your machine</li>
+  <li><code class="highlighter-rouge">docker build . -t [a name that you will recognize two days later when you next look at the list of images]</code> to build the container using the project’s Dockerfile</li>
+  <li><code class="highlighter-rouge">docker run [that name you just filled out after the -t option in in the docker build command]</code> to run the container.</li>
+</ul>
+
+<p>For web sites or applications the variation of the command that you should use is:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker run -p 8000:80 -v $(pwd):/code [name of container]</code></li>
+</ul>
+
+<p>This will run the project in its docker container on port 80 but make it available to you on your machine on port 8000</p>
+
+<p>It will also map the directory /code in the Docker container to your current working directory defined in <code class="highlighter-rouge">$(pwd)</code></p>
+
+<h1 id="ending-work-with-a-docker-container">Ending work with a Docker container</h1>
+
+<p>Once you’re done testing your docker container, you need to stop the container so that it frees up all resources being used – like port numbers</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker container ls</code> will show the list of containers that you are running on your machine right now. You should look for the one that you started in order to test the project you’re working on right now.</li>
+  <li><code class="highlighter-rouge">docker container stop [identifier]</code> will stop the container named [identifier]. The [identifier] is the value for the specific container found in the CONTAINER_ID column</li>
+</ul>
+
+<p>Opptionally, if you think the docker image you built is hopelessly broken and you can’t possibly debug so it’s better just to nuke and start over you can</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker rmi [image identifier]</code> where [image identifier] is the IMAGE_ID of the image that you want to remove</li>
+</ul>
+
+<h1 id="handy-commmands-to-keep-at-the-ready">Handy commmands to keep at the ready</h1>
+
+<ul>
+  <li><code class="highlighter-rouge">docker ps -aq</code> will list all the containers on your machine</li>
+  <li><code class="highlighter-rouge">docker images -q</code> will list all the images on your machine</li>
+  <li><code class="highlighter-rouge">docker stop $(docker ps -aq)</code> will stop all containers on your system</li>
+  <li><code class="highlighter-rouge">docker rm $(docker ps -aq)</code> will remove all containers from your system
+` <code class="highlighter-rouge">docker rmi $(docker images -q)</code> will remove all images from your system</li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">lambda x: blog(x)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>lambda x: blog(x)</li>
+          <li><a href="mailto:tyler@danstrom.com">tyler@danstrom.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/verbalhanglider"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">verbalhanglider</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
